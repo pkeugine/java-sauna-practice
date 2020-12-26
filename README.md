@@ -17,8 +17,24 @@
 ## ✍🏻 입출력 요구사항
 
 ### 💻 프로그래밍 실행 결과 예시
-...
+#### 첫 화면
+![첫 화면 이미지](images/firstOutput.png)
+#### 손님 추가
+![손님 추가 이미지](images/customerAdd.png)
+#### 손님 메뉴 주문
+![손님 메뉴 주문 이미지](images/mealAdd.png)
+#### 손님 퇴장
+![손님 퇴장 이미지](images/customerLeave.png)
 
+### ⛔️ 에러 처리
+#### 손님이 등록 안된 경우
+![손님 등록 안된 이미지](images/errorNoCustomer.png)
+#### 라커 번호가 존재하지 않는 경우
+![라커 번호 없을 때 이미지](images/errorNoLocker.png)
+#### 메뉴 번호가 존재하지 않는 경우
+![메뉴 번호 없을 때 이미지](images/errorNoMenu.png)
+#### 입력이 잘못된 경우
+![입력 잘못 되었을 때 이미지](images/errorWrongInput.png)
 <br>
 
 ## 🎱 프로그래밍 요구사항
@@ -36,8 +52,6 @@
   - else를 쓰지 말라고 하니 switch/case로 구현하는 경우가 있는데 switch/case도 허용하지 않는다.
 - 프로그래밍 요구사항에서 별도로 변경 불가 안내가 없는 경우 파일 수정과 패키지 이동을 자유롭게 할 수 있다.
 - 예외 상황 시 에러 문구를 출력해야 한다. 단, 에러 문구는 `[ERROR]` 로 시작해야 한다.
-
-### 프로그래밍 요구사항 - Application
 
 <br>
 
