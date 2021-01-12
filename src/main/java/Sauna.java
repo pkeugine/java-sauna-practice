@@ -68,13 +68,13 @@ public class Sauna {
 
     // change user layout depending on what user chose before
     private void tackAction(String actionType, String lockerID) {
-        if (actionType == REGISTER_CUSTOMER) {
+        if (actionType.equals(REGISTER_CUSTOMER)) {
             registerCustomer(lockerID);
         }
-        if (actionType == ORDER_MEAL) {
+        if (actionType.equals(ORDER_MEAL)) {
             orderMeal(lockerID);
         }
-        if (actionType == EXIT_CUSTOMER) {
+        if (actionType.equals(EXIT_CUSTOMER)) {
             exitCustomer(lockerID);
         }
     }
