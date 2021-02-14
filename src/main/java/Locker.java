@@ -3,19 +3,19 @@ import java.util.Vector;
 public class Locker {
 
     public static final String LOCKER_TOP = "┌ ────── ┐";
-    public static final String OCCUPATION_NUBMER = "| %d   %02d |";
+    public static final String OCCUPATION_NUBMER = "| %c   %02d |";
     public static final String LOCKER_BOTTOM = "└ ────── ┘";
 
     Locker() {
-        occupation = new Vector<Integer>( );
+        occupation = new Vector<Character>( );
         fee = new Vector<Integer>();
         for(int i=0; i < 50 ; i++) {
-            occupation.add(0);
+            occupation.add('X');
             fee.add(0);
         }
     }
 
-    private Vector<Integer> occupation;
+    private Vector<Character> occupation;
     private Vector<Integer> fee;
 
     public void PrintLockers() {
