@@ -9,7 +9,6 @@ public class Locker {
     Locker() {
         occupation = new Vector<Integer>( );
         fee = new Vector<Integer>();
-
         for(int i=0; i < 50 ; i++) {
             occupation.add(0);
             fee.add(0);
@@ -28,15 +27,15 @@ public class Locker {
     }
 
     public void PrintLockersFrom(int start, int end) {
-        for(int i=start; i < end; i++) {
+        for(int i=start; i <= end; i++) {
             System.out.print(LOCKER_TOP);
         }
         System.out.println();
-        for(int i=start; i < end; i++) {
-            System.out.printf(OCCUPATION_NUBMER,occupation.get(i),fee.get(i));
+        for(int i=start; i <= end; i++) {
+            System.out.printf(OCCUPATION_NUBMER,occupation.get(i),i+1);
         }
         System.out.println();
-        for(int i=start; i < end; i++) {
+        for(int i=start; i <= end; i++) {
             System.out.print(LOCKER_BOTTOM);
         }
         System.out.println();
