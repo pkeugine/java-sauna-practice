@@ -30,4 +30,7 @@ public class Errors {
         System.out.println("[ ERROR ] 이미 등록된 라커입니다.");
     }
 
+    public static void OverBudget() {
+        System.out.println("[ ERROR ] 10만원이 넘어갑니다.");
+    }
 }
