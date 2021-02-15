@@ -3,7 +3,7 @@ public class CheckNumber {
     Errors errors = new Errors();
 
     public Integer CheckGivenLockerNumber(String choice) {
-        if(CheckIfItISQ(choice)==true) {
+        if (CheckIfItISQ(choice)==true) {
             return -1;
         }
         if (CheckNumeric(choice)==0) {
@@ -14,7 +14,7 @@ public class CheckNumber {
             errors.WrongLockerNumber();
             return 0;
         }
-        return 1;
+        return Integer.parseInt(choice);
     }
 
     public int CheckRange(String locker_num) {
@@ -26,33 +26,46 @@ public class CheckNumber {
     }
 
     public int CheckNumeric(String str) {
-        if (str == null) {
-            return 0;
+        if (str.matches("-?\\d+")) {
+           return 1;
         }
-        int length = str.length();
-        if (length == 0) {
-            return 0;
-        }
-        int i = 0;
-        if (str.charAt(0) == '-') {
-            if (length == 1) {
-                return 0;
-            }
-            i = 1;
-        }
-        for (; i < length; i++) {
-            char c = str.charAt(i);
-            if (c < '0' || c > '9') {
-                return 0;
-            }
-        }
-        return 1;
+        return 0;
     }
 
     public boolean CheckIfItISQ(String input) {
-        if ( input.equalsIgnoreCase("Q")) {
+        if (input.equalsIgnoreCase("Q")) {
             return true;
         }
         return false;
     }
+
+    public int CheckOperationRange(String input) {
+        int locker = Integer.parseInt(input);
+        if (locker < 1 || locker > 3) {
+            errors.WrongOperationSelected();
+            return -1;
+        }
+        return locker;
+    }
+
+    public int CheckIfItISB(String input) {
+        if (input.equalsIgnoreCase("B")) {
+            return 0;
+        }
+        errors.WrongOperationSelected();
+        return -1;
+    }
+
+    //return value : 1,2,3,0 ( 0 means 'B' )
+    public int CheckGivenOperationNumber(String input) {
+        int check_numeric = CheckNumeric(input);
+        if (check_numeric == 1) { // means input is a number
+            return CheckOperationRange(input);
+        }
+        if (check_numeric == 0) {
+            return CheckIfItISB(input);
+        }
+        return -1;
+    }
+
 }
