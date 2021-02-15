@@ -20,7 +20,9 @@ public class ExecuteOperationNumberTwo {
     public static String AskFoodNumber() {
         String food_string;
         Food_Menu.PrintFoodMenu();
+        System.out.println();
         System.out.println("메뉴 번호를 골라주세요.");
+        System.out.println();
         food_string=Application.sc.nextLine();
         return food_string;
     }
@@ -45,8 +47,7 @@ public class ExecuteOperationNumberTwo {
         int locker_money = Locker.fee.get(locker_number-1);
         int food_cost = Food_Menu.food_costs[food_number-1];
         Locker.fee.set(locker_number-1,locker_money+food_cost);
-        System.out.printf("[INFO] 라커 번호 %d번에 %d원을 추가하고 %s를 드렸습니다.",locker_number,food_cost,Food_Menu.food_names[food_number-1]);
-        System.out.println();
+        Info.AddFoodInfo(locker_number,food_cost,Food_Menu.food_names[food_number-1]);
         return ;
     }
 

@@ -20,6 +20,7 @@ public class ExecuteOperation {
         if (occupation == false) {
             Locker.occupation.set(locker_number - 1,'O');
             Locker.fee.set(locker_number -1 , 9000);
+            Info.RegisterInfo(locker_number);
             return;
         }
         Errors.OccupiedLocker();

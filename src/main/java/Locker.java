@@ -33,21 +33,13 @@ public class Locker {
     }
 
     public static void PrintLockersFrom(int start, int end) {
-        for (int i=start; i <= end; i++) {
-            System.out.print(LOCKER_TOP);
-        }
+        for (int i=start; i <= end; i++) { System.out.print(LOCKER_TOP); }
+        System.out.println();
+        for (int i=start; i <= end; i++) { System.out.printf(OCCUPATION_NUBMER,occupation.get(i),i+1); }
         System.out.println();
         for (int i=start; i <= end; i++) {
-            System.out.printf(OCCUPATION_NUBMER,occupation.get(i),i+1);
-        }
-        System.out.println();
-        for (int i=start; i <= end; i++) {
-            if (fee.get(i)==0) {
-                System.out.print(ZERO_BOTTOM);
-            }
-            if (fee.get(i) > 0) {
-                System.out.printf(LOCKER_BOTTOM,fee.get(i));
-            }
+            if (fee.get(i)==0) { System.out.print(ZERO_BOTTOM); }
+            if (fee.get(i) > 0) { System.out.printf(LOCKER_BOTTOM,fee.get(i)); }
         }
         System.out.println();
     }

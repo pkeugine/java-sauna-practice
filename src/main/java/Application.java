@@ -6,19 +6,14 @@ public class Application {
 
     public static void main(String []args) {
 
-        String input = new String();
-        Integer OperationNumber = 0;
+        String input;
         Locker locker = new Locker();
-        Food_Menu m = new Food_Menu();
-        CheckNumber CN = new CheckNumber();
-        Errors E = new Errors();
-        ExecuteOperation EO = new ExecuteOperation();
 
         while (true) {
             locker.PrintLockers();
             AskUser.AskWhichLockerToUse();
             input = sc.nextLine();
-            Integer locker_number = CN.CheckGivenLockerNumber(input);
+            Integer locker_number = CheckNumber.CheckGivenLockerNumber(input);
             if (locker_number == -1) {
                 return;
             }
