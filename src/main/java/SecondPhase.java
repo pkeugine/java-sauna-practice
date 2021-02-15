@@ -7,7 +7,9 @@ public class SecondPhase {
             AskUser.AskWhatToDo(locker_number);
             input = Application.sc.nextLine();
             OperationNumber = CheckNumber.CheckGivenOperationNumber(input);
-            ExecuteOperation.ExecuteOperationNumber(OperationNumber, locker_number);
+            if ( ExecuteOperation.ExecuteOperationNumber(OperationNumber, locker_number) == 0 ) {
+                break;
+            }
         }
     }
 
