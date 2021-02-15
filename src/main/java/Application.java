@@ -23,10 +23,7 @@ public class Application {
                 return;
             }
             if (locker_number >= 1) {
-                AskUser.AskWhatToDo(locker_number);
-                input = sc.nextLine();
-                OperationNumber = CN.CheckGivenOperationNumber(input);
-                ExecuteOperation.ExecuteOperationNumber(OperationNumber,locker_number);
+                SecondPhase.SecondPhaseMethod(locker_number);
             }
         }
 

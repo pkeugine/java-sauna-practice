@@ -4,7 +4,7 @@ public class CheckNumber {
         if (CheckIfItISQ(choice)==true) {
             return -1;
         }
-        if (CheckNumeric(choice)==0) {
+        if (CheckNumeric(choice)==0 ) {
             Errors.NeedToInputNumber();
             return 0;
         }
@@ -70,7 +70,6 @@ public class CheckNumber {
     //Check if selected food number is valid. Return -1 if not valid, returns integer in range [1,10] if valid
     public static int CheckGivenFoodNumber(String food_number) {
         if ( CheckNumeric(food_number) == 0 || CheckRange(food_number,1,10) == 0 ) {
-            Errors.WrongMenuNumber();
             return -1;
         }
         return Integer.parseInt(food_number);
