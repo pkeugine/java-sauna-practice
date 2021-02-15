@@ -8,21 +8,21 @@ public class CheckNumber {
             Errors.NeedToInputNumber();
             return 0;
         }
-        if ( CheckRange(choice) == 0 ) {
+        if ( CheckRange(choice,1,50) == 0 ) {
             Errors.WrongLockerNumber();
             return 0;
         }
         return Integer.parseInt(choice);
     }
 
-    public static int CheckRange(String locker_num) {
+    public static int CheckRange(String locker_num, int first, int last) {
         int locker = Integer.parseInt(locker_num);
-        if (locker < 1 || locker > 50) {
+        if (locker < first || locker > last) {
            return 0;
         }
         return 1;
     }
-
+    //return 1 -> number / return 0 -> not number
     public static int CheckNumeric(String str) {
         if (str.matches("-?\\d+")) {
            return 1;
@@ -66,7 +66,14 @@ public class CheckNumber {
         return -1;
     }
 
-    //Check if selected food number is valid
 
+    //Check if selected food number is valid. Return -1 if not valid, returns integer in range [1,10] if valid
+    public static int CheckGivenFoodNumber(String food_number) {
+        if ( CheckNumeric(food_number) == 0 || CheckRange(food_number,1,10) == 0 ) {
+            Errors.WrongMenuNumber();
+            return -1;
+        }
+        return Integer.parseInt(food_number);
+    }
 
 }
