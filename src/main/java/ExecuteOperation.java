@@ -1,15 +1,18 @@
 public class ExecuteOperation {
 
-    public static void ExecuteOperationNumber(int OperationNum, int input_number) {
-        boolean check_occupation = CheckOccupationAt(input_number);
+    public static void ExecuteOperationNumber(int OperationNum, int input_locker_number) {
+        boolean check_occupation = CheckOccupationAt(input_locker_number);
         if ( OperationNum == 0 ) {
             return ;
         }
         if ( OperationNum == 1 ) { //check occupation and add a owner if it is empty
-            LockerOccupationOperator(input_number,check_occupation);
+            LockerOccupationOperator(input_locker_number,check_occupation);
         }
         if ( OperationNum == 2) {
-            ExecuteOperationNumberTwo.OperationNumberTwo(check_occupation,input_number);
+            ExecuteOperationNumberTwo.OperationNumberTwo(check_occupation,input_locker_number);
+        }
+        if ( OperationNum == 3 ) {
+            ExecuteOperationNumberThree.ExecuteOperationNumberThreeMethod(input_locker_number);
         }
     }
     //return true if occupied , return false if not occupied

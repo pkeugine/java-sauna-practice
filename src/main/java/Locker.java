@@ -27,6 +27,11 @@ public class Locker {
         PrintLockersFrom(40,49);
     }
 
+    public static void ClearLockerNumer(int locker_number) {
+        occupation.set(locker_number-1,'X');
+        fee.set(locker_number-1,0);
+    }
+
     public static void PrintLockersFrom(int start, int end) {
         for (int i=start; i <= end; i++) {
             System.out.print(LOCKER_TOP);
