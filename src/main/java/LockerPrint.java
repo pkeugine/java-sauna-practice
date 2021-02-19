@@ -9,7 +9,7 @@ public class LockerPrint {
     int start = 1 , end = 10;
     for (int i =0 ; i < 5 ; i++) {
       printLockerDataFromTopBlock(start, end, locker);
-      printLockerDataFromTopBlock(start, end, locker);
+      printLockerDataFromBottomBlock(start, end, locker);
       start += 10;
       end += 10;
     }
