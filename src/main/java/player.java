@@ -23,6 +23,7 @@ public class player {
       System.out.printf("[MENU]  [%02d] %10s :  %d 원",i,f.getFoodName(i),f.getFoodCost(i));
     }
     System.out.println();
+    System.out.println("메뉴 번호를 골라주세요");
   }
 
 }

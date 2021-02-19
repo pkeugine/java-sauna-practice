@@ -14,10 +14,6 @@ public class LockerContainer {
     this.occupation = set;
   }
 
-  public boolean getOccupation() {
-    return this.occupation;
-  }
-
   public void addFee(Integer fee) {
     this.fee += fee;
   }
@@ -26,12 +22,16 @@ public class LockerContainer {
     this.fee = fee;
   }
 
-  public Integer getFee() {
-    return this.fee;
-  }
-
   public void setLockerNumber(Integer lockerNumber) {
     this.lockerNumber = lockerNumber;
+  }
+
+  public boolean getOccupation() {
+    return this.occupation;
+  }
+
+  public Integer getFee() {
+    return this.fee;
   }
 
   public Integer getLockerNumber() {
