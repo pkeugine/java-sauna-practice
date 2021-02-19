@@ -20,10 +20,25 @@ public class player {
   public void printFoodMenu() {
     System.out.println();
     for (int i=1; i <= 10; i++) {
-      System.out.printf("[MENU]  [%02d] %10s :  %d 원",i,f.getFoodName(i),f.getFoodCost(i));
+      System.out.printf("[MENU]  [%02d] %10s :  %d 원\n",i,f.getFoodName(i),f.getFoodCost(i));
     }
     System.out.println();
     System.out.println("메뉴 번호를 골라주세요");
   }
+
+  public void printInfoOccupationSuccessful(int lockerNumber){
+    System.out.println();
+    System.out.printf("[INFO] %d번 라커에 손님이 등록되었습니다.\n",lockerNumber);
+    System.out.println();
+  }
+
+  public void printInfoFoodChoiceSuccessful(int lockerNumber, int foodNumber) {
+    Integer foodCost = f.getFoodCost(foodNumber);
+    String foodName = f.getFoodName(foodNumber);
+    System.out.println();
+    System.out.printf("[INFO] 러커 번호 %d번 %원을 추가하고 %s를 드렸습니다.\n",lockerNumber,foodCost,foodName);
+    System.out.println();
+  }
+
 
 }
