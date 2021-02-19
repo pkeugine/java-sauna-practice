@@ -1,5 +1,7 @@
 public class player {
 
+  Food f = new Food();
+
   public void askWhichLockerToUse() {
     System.out.println();
     System.out.println("사우나 라커 번호를 입력해주세요. (q)를 입력하여 프로그램을 종료할 수 있습니다.");
@@ -13,6 +15,14 @@ public class player {
     System.out.println("2. 요리 금액 추가하기");
     System.out.println("3. 결제하고 퇴장하기");
     System.out.println("B. 뒤로가기");
+  }
+
+  public void printFoodMenu() {
+    System.out.println();
+    for (int i=1; i <= 10; i++) {
+      System.out.printf("[MENU]  [%02d] %10s :  %d 원",i,f.getFoodName(i),f.getFoodCost(i));
+    }
+    System.out.println();
   }
 
 }
