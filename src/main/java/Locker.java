@@ -5,13 +5,13 @@ public class Locker {
   private HashMap<Integer,LockerContainer> lockerData = new HashMap<>(50);
 
   Locker() {
-    for (int i=0; i < 50 ; i++) {
-      LockerContainer c = new LockerContainer(i+1);
+    for (int i = 0; i < 50 ; i++) {
+      LockerContainer c = new LockerContainer();
       lockerData.put(i,c);
     }
   }
 
-  public boolean checkLockerOccupation(int lockerNumber) {
+  public boolean getLockerOccupation(int lockerNumber) {
     LockerContainer temp = lockerData.get(lockerNumber-1);
     return temp.getOccupation();
   }
@@ -27,6 +27,12 @@ public class Locker {
     lockerData.put(lockerNumber-1,temp);
   }
 
+  public void setLockerFee9K(int lockerNumber) {
+    LockerContainer temp = lockerData.get(lockerNumber-1);
+    temp.setFee(9000);
+    lockerData.put(lockerNumber-1,temp);
+  }
+
   public void addFoodCost(int lockerNumber, int foodCost) {
     LockerContainer temp = lockerData.get(lockerNumber-1);
     temp.addFee(foodCost);
@@ -39,7 +45,5 @@ public class Locker {
     temp.setOccupation(false);
     lockerData.put(lockerNumber-1,temp);
   }
-
-
 
 }
