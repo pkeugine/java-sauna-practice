@@ -1,6 +1,6 @@
 public class FoodContainer {
 
-  FoodContainer( String foodName, Integer foodCost) {
+  FoodContainer(String foodName, Integer foodCost) {
     this.foodName = foodName;
     this.foodCost = foodCost;
   }
@@ -15,4 +15,5 @@ public class FoodContainer {
   public String getFoodName(){
     return foodName;
   }
+
 }
