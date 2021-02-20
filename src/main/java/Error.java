@@ -24,4 +24,5 @@ public class Error {
     System.out.println("[ERROR] 요금이 10만원을 넘어갑니다.");
     System.out.println();
   }
+
 }
